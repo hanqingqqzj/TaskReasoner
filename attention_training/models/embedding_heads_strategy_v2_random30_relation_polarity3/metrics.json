@@ -1,0 +1,89 @@
+{
+  "task_relation": {
+    "accuracy": 0.8751025711159738,
+    "macro_f1": 0.7588620252348535,
+    "weighted_f1": 0.871188580704307,
+    "per_class": {
+      "negative_related": {
+        "precision": 0.49454545454545457,
+        "recall": 0.424263431542461,
+        "f1": 0.45671641791044776,
+        "support": 2885
+      },
+      "not_related": {
+        "precision": 0.9523903595416832,
+        "recall": 0.9889907002188184,
+        "f1": 0.9703455216370346,
+        "support": 14624
+      },
+      "positive_related": {
+        "precision": 0.8550962285319755,
+        "recall": 0.8440241928614022,
+        "f1": 0.8495241361570779,
+        "support": 11739
+      }
+    },
+    "train_rows": 116992,
+    "test_rows": 29248,
+    "classes": {
+      "not_related": 73120,
+      "positive_related": 58697,
+      "negative_related": 14423
+    },
+    "structured_categorical_features": [
+      "source_project_key",
+      "target_project_key",
+      "source_task_type",
+      "target_task_type",
+      "source_priority",
+      "target_priority"
+    ],
+    "structured_numeric_features": [
+      "same_project",
+      "same_task_type",
+      "same_priority",
+      "component_overlap",
+      "component_overlap_count",
+      "story_point_abs_diff"
+    ],
+    "oversampled_stage2_train_rows": 93916,
+    "stage1_binary": {
+      "accuracy": 0.9697757111597374,
+      "macro_f1": 0.9697645477529104,
+      "weighted_f1": 0.9697645477529104,
+      "per_class": {
+        "has_relation": {
+          "precision": 0.988550704025032,
+          "recall": 0.9505607221006565,
+          "f1": 0.9691835738687862,
+          "support": 14624
+        },
+        "not_related": {
+          "precision": 0.9523903595416832,
+          "recall": 0.9889907002188184,
+          "f1": 0.9703455216370346,
+          "support": 14624
+        }
+      }
+    },
+    "stage2_positive_type": {
+      "accuracy": 0.8029950765864332,
+      "macro_f1": 0.6744664335124827,
+      "weighted_f1": 0.798309355024808,
+      "per_class": {
+        "negative_related": {
+          "precision": 0.5007843137254901,
+          "recall": 0.44263431542461007,
+          "f1": 0.46991720331186754,
+          "support": 2885
+        },
+        "positive_related": {
+          "precision": 0.8668212688421402,
+          "recall": 0.891558054348752,
+          "f1": 0.8790156637130979,
+          "support": 11739
+        }
+      }
+    }
+  }
+}

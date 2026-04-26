@@ -1,0 +1,512 @@
+{
+  "settings": {
+    "data_dir": "attention_training/data/strategy_v3_random50_task_optimized",
+    "max_features": 180000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "min_class_count": 20,
+    "candidate_profile": "compact",
+    "random_state": 42
+  },
+  "targets": {
+    "task_type": {
+      "best": {
+        "accuracy": 0.8329786066922655,
+        "macro_f1": 0.6977243592363352,
+        "weighted_f1": 0.834389246989616,
+        "per_class": {
+          "Bug": {
+            "precision": 0.9179385625965997,
+            "recall": 0.8922535211267606,
+            "f1": 0.9049138177316446,
+            "support": 21300
+          },
+          "Epic": {
+            "precision": 0.7365079365079366,
+            "recall": 0.5497630331753555,
+            "f1": 0.6295793758480326,
+            "support": 422
+          },
+          "Improvement": {
+            "precision": 0.5304892186413169,
+            "recall": 0.5452812202097236,
+            "f1": 0.5377835233282406,
+            "support": 4196
+          },
+          "New Feature": {
+            "precision": 0.4430835734870317,
+            "recall": 0.4367897727272727,
+            "f1": 0.43991416309012876,
+            "support": 1408
+          },
+          "Other": {
+            "precision": 0.7638436482084691,
+            "recall": 0.7116843702579666,
+            "f1": 0.7368421052631579,
+            "support": 1318
+          },
+          "Story": {
+            "precision": 0.7599653379549394,
+            "recall": 0.8307546574044837,
+            "f1": 0.7937848845979786,
+            "support": 3167
+          },
+          "Sub-task": {
+            "precision": 0.6037483266398929,
+            "recall": 0.6401703335699077,
+            "f1": 0.6214261109197382,
+            "support": 1409
+          },
+          "Suggestion": {
+            "precision": 0.9972726319102067,
+            "recall": 0.9995794343391862,
+            "f1": 0.9984247006931317,
+            "support": 9511
+          },
+          "Task": {
+            "precision": 0.5879541108986616,
+            "recall": 0.6487341772151899,
+            "f1": 0.6168505516549649,
+            "support": 2844
+          }
+        },
+        "candidate": "linear_svc_balanced_c1",
+        "algorithm": "LinearSVC",
+        "seconds": 427.593,
+        "warnings": [],
+        "target": "task_type",
+        "label_source": "task_type_model",
+        "text_column": "task_model_text",
+        "categorical_columns": [
+          "project_key",
+          "priority_original_coarse",
+          "status_clean",
+          "resolution_clean"
+        ],
+        "train_rows": 182298,
+        "test_rows": 45575,
+        "classes": {
+          "Bug": 106500,
+          "Suggestion": 47554,
+          "Improvement": 20979,
+          "Story": 15834,
+          "Task": 14218,
+          "Sub-task": 7045,
+          "New Feature": 7041,
+          "Other": 6593,
+          "Epic": 2109
+        },
+        "candidate_profile": "compact",
+        "selection_metric": "macro_f1"
+      },
+      "candidates": [
+        {
+          "accuracy": 0.8329786066922655,
+          "macro_f1": 0.6977243592363352,
+          "weighted_f1": 0.834389246989616,
+          "per_class": {
+            "Bug": {
+              "precision": 0.9179385625965997,
+              "recall": 0.8922535211267606,
+              "f1": 0.9049138177316446,
+              "support": 21300
+            },
+            "Epic": {
+              "precision": 0.7365079365079366,
+              "recall": 0.5497630331753555,
+              "f1": 0.6295793758480326,
+              "support": 422
+            },
+            "Improvement": {
+              "precision": 0.5304892186413169,
+              "recall": 0.5452812202097236,
+              "f1": 0.5377835233282406,
+              "support": 4196
+            },
+            "New Feature": {
+              "precision": 0.4430835734870317,
+              "recall": 0.4367897727272727,
+              "f1": 0.43991416309012876,
+              "support": 1408
+            },
+            "Other": {
+              "precision": 0.7638436482084691,
+              "recall": 0.7116843702579666,
+              "f1": 0.7368421052631579,
+              "support": 1318
+            },
+            "Story": {
+              "precision": 0.7599653379549394,
+              "recall": 0.8307546574044837,
+              "f1": 0.7937848845979786,
+              "support": 3167
+            },
+            "Sub-task": {
+              "precision": 0.6037483266398929,
+              "recall": 0.6401703335699077,
+              "f1": 0.6214261109197382,
+              "support": 1409
+            },
+            "Suggestion": {
+              "precision": 0.9972726319102067,
+              "recall": 0.9995794343391862,
+              "f1": 0.9984247006931317,
+              "support": 9511
+            },
+            "Task": {
+              "precision": 0.5879541108986616,
+              "recall": 0.6487341772151899,
+              "f1": 0.6168505516549649,
+              "support": 2844
+            }
+          },
+          "candidate": "linear_svc_balanced_c1",
+          "algorithm": "LinearSVC",
+          "seconds": 427.593,
+          "warnings": [],
+          "target": "task_type",
+          "label_source": "task_type_model",
+          "text_column": "task_model_text",
+          "categorical_columns": [
+            "project_key",
+            "priority_original_coarse",
+            "status_clean",
+            "resolution_clean"
+          ],
+          "train_rows": 182298,
+          "test_rows": 45575,
+          "classes": {
+            "Bug": 106500,
+            "Suggestion": 47554,
+            "Improvement": 20979,
+            "Story": 15834,
+            "Task": 14218,
+            "Sub-task": 7045,
+            "New Feature": 7041,
+            "Other": 6593,
+            "Epic": 2109
+          },
+          "candidate_profile": "compact",
+          "selection_metric": "macro_f1"
+        },
+        {
+          "accuracy": 0.8240702139330773,
+          "macro_f1": 0.6903608871494367,
+          "weighted_f1": 0.8288380016480623,
+          "per_class": {
+            "Bug": {
+              "precision": 0.9332755190532062,
+              "recall": 0.8589201877934273,
+              "f1": 0.8945554115835024,
+              "support": 21300
+            },
+            "Epic": {
+              "precision": 0.6918238993710691,
+              "recall": 0.5213270142180095,
+              "f1": 0.5945945945945946,
+              "support": 422
+            },
+            "Improvement": {
+              "precision": 0.5389334591788579,
+              "recall": 0.544327931363203,
+              "f1": 0.5416172634574342,
+              "support": 4196
+            },
+            "New Feature": {
+              "precision": 0.4138533178114086,
+              "recall": 0.5049715909090909,
+              "f1": 0.45489443378119004,
+              "support": 1408
+            },
+            "Other": {
+              "precision": 0.6985138004246284,
+              "recall": 0.7488619119878603,
+              "f1": 0.7228121567191504,
+              "support": 1318
+            },
+            "Story": {
+              "precision": 0.7447405329593267,
+              "recall": 0.8383328070729397,
+              "f1": 0.7887700534759359,
+              "support": 3167
+            },
+            "Sub-task": {
+              "precision": 0.519438444924406,
+              "recall": 0.6827537260468417,
+              "f1": 0.5900030665440049,
+              "support": 1409
+            },
+            "Suggestion": {
+              "precision": 0.9952889447236181,
+              "recall": 0.9995794343391862,
+              "f1": 0.9974295756176887,
+              "support": 9511
+            },
+            "Task": {
+              "precision": 0.5838359469240049,
+              "recall": 0.680731364275668,
+              "f1": 0.6285714285714286,
+              "support": 2844
+            }
+          },
+          "candidate": "logreg_balanced_liblinear",
+          "algorithm": "LogisticRegression",
+          "seconds": 357.265,
+          "warnings": []
+        }
+      ]
+    },
+    "priority": {
+      "best": {
+        "accuracy": 0.7189406247126261,
+        "macro_f1": 0.6818189005251654,
+        "weighted_f1": 0.7207979804509183,
+        "per_class": {
+          "high": {
+            "precision": 0.5084969788519638,
+            "recall": 0.5900525854513584,
+            "f1": 0.5462474645030426,
+            "support": 4564
+          },
+          "low": {
+            "precision": 0.7249401300034212,
+            "recall": 0.7942874278431666,
+            "f1": 0.7580310510123774,
+            "support": 13339
+          },
+          "medium": {
+            "precision": 0.7997168030207678,
+            "recall": 0.690625,
+            "f1": 0.7411781860600758,
+            "support": 14720
+          }
+        },
+        "candidate": "logreg_balanced_liblinear",
+        "algorithm": "LogisticRegression",
+        "seconds": 128.13,
+        "warnings": [],
+        "target": "priority",
+        "label_source": "priority_original_coarse",
+        "text_column": "priority_model_text",
+        "categorical_columns": [
+          "task_type_model",
+          "project_key",
+          "status_clean",
+          "resolution_clean"
+        ],
+        "train_rows": 130491,
+        "test_rows": 32623,
+        "classes": {
+          "medium": 73602,
+          "low": 66694,
+          "high": 22818
+        },
+        "candidate_profile": "compact",
+        "selection_metric": "macro_f1"
+      },
+      "candidates": [
+        {
+          "accuracy": 0.7076908929283021,
+          "macro_f1": 0.6656072095155239,
+          "weighted_f1": 0.708181279161556,
+          "per_class": {
+            "high": {
+              "precision": 0.5081103855066358,
+              "recall": 0.5284837861524978,
+              "f1": 0.5180968746643755,
+              "support": 4564
+            },
+            "low": {
+              "precision": 0.7260039874679578,
+              "recall": 0.7643751405652598,
+              "f1": 0.7446956140671219,
+              "support": 13339
+            },
+            "medium": {
+              "precision": 0.7575910931174089,
+              "recall": 0.7118885869565217,
+              "f1": 0.7340291398150742,
+              "support": 14720
+            }
+          },
+          "candidate": "linear_svc_balanced_c1",
+          "algorithm": "LinearSVC",
+          "seconds": 411.138,
+          "warnings": []
+        },
+        {
+          "accuracy": 0.7189406247126261,
+          "macro_f1": 0.6818189005251654,
+          "weighted_f1": 0.7207979804509183,
+          "per_class": {
+            "high": {
+              "precision": 0.5084969788519638,
+              "recall": 0.5900525854513584,
+              "f1": 0.5462474645030426,
+              "support": 4564
+            },
+            "low": {
+              "precision": 0.7249401300034212,
+              "recall": 0.7942874278431666,
+              "f1": 0.7580310510123774,
+              "support": 13339
+            },
+            "medium": {
+              "precision": 0.7997168030207678,
+              "recall": 0.690625,
+              "f1": 0.7411781860600758,
+              "support": 14720
+            }
+          },
+          "candidate": "logreg_balanced_liblinear",
+          "algorithm": "LogisticRegression",
+          "seconds": 128.13,
+          "warnings": [],
+          "target": "priority",
+          "label_source": "priority_original_coarse",
+          "text_column": "priority_model_text",
+          "categorical_columns": [
+            "task_type_model",
+            "project_key",
+            "status_clean",
+            "resolution_clean"
+          ],
+          "train_rows": 130491,
+          "test_rows": 32623,
+          "classes": {
+            "medium": 73602,
+            "low": 66694,
+            "high": 22818
+          },
+          "candidate_profile": "compact",
+          "selection_metric": "macro_f1"
+        }
+      ]
+    },
+    "difficulty_label": {
+      "best": {
+        "accuracy": 0.649005568814638,
+        "macro_f1": 0.6283293213546307,
+        "weighted_f1": 0.646761678029514,
+        "per_class": {
+          "easy": {
+            "precision": 0.7265415549597856,
+            "recall": 0.7607017543859649,
+            "f1": 0.7432293452176894,
+            "support": 2850
+          },
+          "hard": {
+            "precision": 0.5744832501781896,
+            "recall": 0.6051051051051051,
+            "f1": 0.5893967093235832,
+            "support": 1332
+          },
+          "medium": {
+            "precision": 0.5821917808219178,
+            "recall": 0.5254398478364242,
+            "f1": 0.5523619095226193,
+            "support": 2103
+          }
+        },
+        "candidate": "logreg_balanced_liblinear",
+        "algorithm": "LogisticRegression",
+        "seconds": 14.391,
+        "warnings": [],
+        "target": "difficulty_label",
+        "label_source": "story_point_clean_3class",
+        "text_column": "difficulty_model_text",
+        "categorical_columns": [
+          "task_type_model",
+          "project_key",
+          "priority_original_coarse"
+        ],
+        "train_rows": 25136,
+        "test_rows": 6285,
+        "classes": {
+          "easy": 14250,
+          "medium": 10512,
+          "hard": 6659
+        },
+        "candidate_profile": "compact",
+        "selection_metric": "macro_f1"
+      },
+      "candidates": [
+        {
+          "accuracy": 0.6447096260938743,
+          "macro_f1": 0.624228258179556,
+          "weighted_f1": 0.6425034019273879,
+          "per_class": {
+            "easy": {
+              "precision": 0.7217768871075484,
+              "recall": 0.7582456140350877,
+              "f1": 0.7395619438740588,
+              "support": 2850
+            },
+            "hard": {
+              "precision": 0.5876598946576373,
+              "recall": 0.5863363363363363,
+              "f1": 0.5869973694099963,
+              "support": 1332
+            },
+            "medium": {
+              "precision": 0.5657492354740061,
+              "recall": 0.5278174037089871,
+              "f1": 0.5461254612546126,
+              "support": 2103
+            }
+          },
+          "candidate": "linear_svc_balanced_c1",
+          "algorithm": "LinearSVC",
+          "seconds": 35.633,
+          "warnings": []
+        },
+        {
+          "accuracy": 0.649005568814638,
+          "macro_f1": 0.6283293213546307,
+          "weighted_f1": 0.646761678029514,
+          "per_class": {
+            "easy": {
+              "precision": 0.7265415549597856,
+              "recall": 0.7607017543859649,
+              "f1": 0.7432293452176894,
+              "support": 2850
+            },
+            "hard": {
+              "precision": 0.5744832501781896,
+              "recall": 0.6051051051051051,
+              "f1": 0.5893967093235832,
+              "support": 1332
+            },
+            "medium": {
+              "precision": 0.5821917808219178,
+              "recall": 0.5254398478364242,
+              "f1": 0.5523619095226193,
+              "support": 2103
+            }
+          },
+          "candidate": "logreg_balanced_liblinear",
+          "algorithm": "LogisticRegression",
+          "seconds": 14.391,
+          "warnings": [],
+          "target": "difficulty_label",
+          "label_source": "story_point_clean_3class",
+          "text_column": "difficulty_model_text",
+          "categorical_columns": [
+            "task_type_model",
+            "project_key",
+            "priority_original_coarse"
+          ],
+          "train_rows": 25136,
+          "test_rows": 6285,
+          "classes": {
+            "easy": 14250,
+            "medium": 10512,
+            "hard": 6659
+          },
+          "candidate_profile": "compact",
+          "selection_metric": "macro_f1"
+        }
+      ]
+    }
+  }
+}
